@@ -1,0 +1,50 @@
+extends layout
+
+block main 
+  h2 Homepage
+
+  if buildings.length
+    h3 Buildings
+    table
+      thead
+        tr
+          th Name
+          th City
+          th Sqft
+      tbody
+        each building in buildings
+          tr
+            td= building.name
+            td= building.city
+            td= building.sqft
+  else
+    p No buildings available.
+
+  if vehicles.length
+    h3 Vehicles
+    table
+      thead
+        tr
+          th Make
+          th Model
+          th Year
+      tbody
+        each vehicle in vehicles
+          tr
+            td= vehicle.make
+            td= vehicle.model
+            td= vehicle.year
+  else
+    p No vehicles available.
+
+block footer
+  h4 Footer Navigation
+
+  form(action="/home" method="get") 
+    button Home
+
+  form(action="/home/buildings" method="get") 
+    button Buildings
+  
+  form(action="/home/vehicles" method="get") 
+    button Vehicles

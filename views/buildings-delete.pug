@@ -1,0 +1,16 @@
+extends layout
+
+block main
+  if buildings.length
+    form(action="/home/buildings/delete" method="POST")
+      select(name="id" required)
+        option(value="" disabled selected) -- Select a building --
+        each building in buildings
+          option(value=building._id) #{building.name}
+      br
+      button(type="submit") Delete
+      br
+      a(href="/home/buildings") Cancel
+  else
+    p No buildings available to delete.
+    a(href="/home/buildings") Back to Buildings

@@ -1,0 +1,26 @@
+extends layout
+
+block main
+  form(action="/home/buildings/add" method="post")
+    dl
+      dt
+        label(for="name") Enter the name of your building:
+      dd
+        input(type="text", id="name", name="name", placeholder="New Building", required)
+      br
+
+      dt
+        label(for="city") Enter the city:
+      dd
+        input(type="text", id="city", name="city", placeholder="Chicago", required)
+      br
+
+      dt
+        label(for="sqft") Enter the square footage:
+      dd
+        input(type="number", id="sqft", name="sqft", min="0", max="1000000", placeholder="10500", required)
+      br
+
+    button(type="submit" value="Save") Save
+      br
+    a(href="/home/buildings") Cancel

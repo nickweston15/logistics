@@ -1,0 +1,16 @@
+extends layout
+
+block main
+  if vehicles.length
+    form(action="/home/vehicles/delete" method="POST")
+      select(name="id" required)
+        option(value="" disabled selected) -- Select a vehicle --
+        each vehicle in vehicles
+          option(value=vehicle._id) #{vehicle.make} #{vehicle.model} (#{vehicle.year})
+      br
+      button(type="submit") Delete
+      br
+      a(href="/home/vehicles") Cancel
+  else
+    p No vehicles available to delete.
+    a(href="/home/vehicles") Back to Vehicles

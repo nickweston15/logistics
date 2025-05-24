@@ -5,5 +5,25 @@
     "express-session": "^1.18.1",
     "mongoose": "^8.14.0",
     "pug": "^3.0.3"
-  }
+  },
+  "name": "logistics",
+  "description": "I built this app to learn more about how users interact with apps on the web. Specifically, I wanted to understand how to build an API that was accessible for the user and followed the Model-View-Controller software design pattern on the backend. Additionally, I taught myself how to use MongoDB as the data storage platform on this app just for the sake of adding tools to the toolbelt.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickweston15/logistics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickweston15/logistics/issues"
+  },
+  "homepage": "https://github.com/nickweston15/logistics#readme"
 }
